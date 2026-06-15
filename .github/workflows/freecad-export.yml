@@ -1,0 +1,30 @@
+name: FreeCAD Export
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  upload:
+    name: Upload CAD exports
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+
+      - name: Check exported CAD files
+        run: |
+          test -d exports
+          find exports -type f \( -name '*.step' -o -name '*.stp' -o -name '*.stl' -o -name '*.3mf' \) | grep .
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: seven-cad-exports
+          path: |
+            exports/**/*.step
+            exports/**/*.stp
+            exports/**/*.stl
+            exports/**/*.3mf
+          if-no-files-found: error
