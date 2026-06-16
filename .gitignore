@@ -1,0 +1,20 @@
+# FreeCAD
+*.FCStd1
+*.FCBak
+*.FCStd.bak
+*.FCStd~
+*.FCMacro~
+
+# FreeCAD autosave and temporary files
+*~
+~*
+*.tmp
+*.bak
+*.backup
+_autosave-*
+
+# Local OS/editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
