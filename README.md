@@ -37,6 +37,33 @@ lock‑in.
 
 This repository contains FreeCAD project and documentation for Seven reference enclosure.
 
+## Prerequisites
+
+* Install [FreeCAD](https://www.freecad.org/downloads.php)
+* A 3D printer or use a 3D printing service like [JLCPCB](https://jlcpcb.com/3d-printing?from=Jesse)
+
+## Getting started
+
+Clone repository:
+
+```bash
+git clone git@github.com:id8-engineering/seven-cad.git
+```
+
+Cd into it:
+
+```bash
+cd seven-cad
+```
+
+1. Open FreeCAD
+2. Select the file in repository under freecad ending with .FCStd.
+3. On the left panel you will see your timeline, press the **eye** icon on the names **case**, **lid** & **jtag-box**.
+4. Press the **eye** icon on all bodies on at a time, start with **case** and do the rest of the steps then go back to the next body.
+5. Double press the 3D body so it gets green.
+6. In the left top corner press **file** then **export** and pick your wanted 3D model file-type. There is often a recommended file-type for your printer.
+7. Import these three files into your printer application and print your full enclosure case for Seven.
+
 ## License
 
 Copyright 2026 ID8 Engineering AB
